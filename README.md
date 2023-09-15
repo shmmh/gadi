@@ -1,16 +1,52 @@
-# gadi
+<br />
+<div align="center">
+    <img src="media/logo.png" alt="Gadi Logo" width="200" height="200">
 
-A new Flutter project.
+  <h3 align="center">Gadi: Pomodoro Timer</h3>
+
+  <p align="center">
+    Gadi (/gɒd.i/) is an opensource minimal cross platform pomodoro timer.
+    <br />
+  </p>
+</div>
+<div align="center">
+    <img src="media/design.png" alt="Gadi Design" width="8000" height="600">
+</div>
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+COMING SOON...
 
-A few resources to get you started if this is your first Flutter project:
+## Todo
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [ ] Implement clock interface with CustomPaint class.
+- [ ] Implement clock timer
+- [ ]
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Features
+
+- [ ] Custom Pomodoro Timer
+- [ ] Break Time Adjustment
+- [ ] Session Adjustment
+- [ ] Focus/Break Metrics
+- [ ] Full Screen Break Mode
+- [ ] Focus Music
+- [ ] Macos Menu Bar Support
+- [ ] Android/Ios Always on Display Mode integration
+
+<!-- ### Prerequisites and Installation
+
+To run and build the application you need Flutter 3.0 installed. Follow the oficial documentation at [Flutter Installation Guide](https://docs.flutter.dev/get-started/install).
+* Run flutter doctor
+  ```sh
+  flutter doctor -v
+  ```
+ * Install flutter packages
+  ```sh
+  flutter pub get
+  ```
+* Run flutter run command
+  ```sh
+  # Use -d to specify the device
+  flutter run -d macos
+  ```  -->
