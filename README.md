@@ -19,9 +19,8 @@ COMING SOON...
 
 ## Todo
 
-- [ ] Implement clock interface with CustomPaint class.
+- [-] Implement clock interface with CustomPaint class.
 - [ ] Implement clock timer
-- [ ]
 
 ## Features
 
