@@ -1,8 +1,10 @@
 <br />
 <div align="center">
     <img src="media/logo.png" alt="Gadi Logo" width="200" height="200">
+    <br/>
+    <img src="media/logo mini.png" alt="Gadi Logo Small" width="200" height="auto">
 
-  <h3 align="center">Gadi: Pomodoro Timer</h3>
+  <h3 align="center">A Minimal Pomodoro Timer</h3>
 
   <p align="center">
     Gadi (/gɒd.i/) is an opensource minimal cross platform pomodoro timer.
@@ -10,7 +12,7 @@
   </p>
 </div>
 <div align="center">
-    <img src="media/design.png" alt="Gadi Design" width="8000" height="600">
+    <img src="media/design.png" alt="Gadi Design" width="auto" height="auto">
 </div>
 
 ## Getting Started
