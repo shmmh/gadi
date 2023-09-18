@@ -26,7 +26,7 @@ void drawTicks(Canvas canvas, Size size, double radius, Paint tickPainter, TextP
       canvas.translate(0.0, -radius + distanceToTick);
 
       textPainter.text = TextSpan(
-        text: '${i == 0 ? 12 : i ~/ 5}',
+        text: '${i == 0 ? 0 : i}'.padLeft(2, '0'),
         style: textStyle,
       );
 

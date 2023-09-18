@@ -11,10 +11,13 @@ const secondFaceWidth = 175.0;
 const distanceToMinuteTick = 28.0;
 const distanceToSecondTick = 24.0;
 
-const minuteFocusWidth = 50.0;
+const minuteFocusWidth = 45.0;
 const minuteFocusHeight = 90.0;
-const minuteFocusBorderRadius = 30.0;
+const minuteFocusBorderRadius = 32.0;
 const minuteFocusOffset = secondFaceWidth - hourTickMarkLength - minuteFocusHeight / 2;
+
+const minuteTextOffset = minuteFaceWidth - hourTickMarkLength - 15;
+const secondTextOffset = secondFaceWidth - hourTickMarkLength - 15;
 
 const minuteTextStyle = TextStyle(
   fontFamily: "Koulen",
@@ -22,11 +25,13 @@ const minuteTextStyle = TextStyle(
   color: Colors.white,
 );
 const secondTextStyle = TextStyle(
+  decoration: TextDecoration.none,
   fontFamily: "Koulen",
   fontSize: 20,
   color: Colors.white,
 );
 const hourTextStyle = TextStyle(
+  decoration: TextDecoration.none,
   fontFamily: "Koulen",
   fontSize: 48,
   color: Colors.white,
