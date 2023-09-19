@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:gadi/utils/draw_ticks.dart';
 
@@ -12,8 +10,8 @@ class FocusCustomPaint extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
+      size: const Size(minuteFaceWidth * 2, minuteFaceWidth * 2),
       painter: MinuteFocusPainter(dateTime: dateTime),
-      child: Container(),
     );
   }
 }

@@ -10,8 +10,8 @@ class SecondCustomPaint extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
+      size: const Size(secondFaceWidth * 2, secondFaceWidth * 2),
       painter: SecondFacePainter(second: second),
-      child: Container(),
     );
   }
 }

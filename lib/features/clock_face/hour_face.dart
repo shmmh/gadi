@@ -10,7 +10,7 @@ class HourCustomPaint extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomPaint(
       painter: HourFacePainter(hour: hour),
-      child: Container(),
+      size: MediaQuery.of(context).size,
     );
   }
 }

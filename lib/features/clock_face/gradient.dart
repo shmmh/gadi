@@ -9,6 +9,7 @@ class GradientCustomPaint extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
+      size: MediaQuery.of(context).size,
       painter: GradientOverlayPainter(),
       child: Container(),
     );

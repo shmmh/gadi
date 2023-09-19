@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:gadi/features/timer/timer.dart';
 import 'dart:math';
 import 'features/clock_face/clock_face.dart';
 
@@ -53,7 +54,7 @@ class _MyAppState extends ConsumerState<MyApp> with SingleTickerProviderStateMix
         fontFamily: 'Koulen',
       ),
       home: const Scaffold(
-        body: ClockFace(),
+        body: ClockTimer(),
       ),
     );
   }

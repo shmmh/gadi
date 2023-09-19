@@ -11,7 +11,7 @@ class MinuteCustomPaint extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomPaint(
       painter: MinuteFacePainter(minute: minute),
-      child: Container(),
+      size: const Size(minuteFaceWidth * 2, minuteFaceWidth * 2),
     );
   }
 }

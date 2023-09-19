@@ -19,9 +19,9 @@ const secondFaceWidth = 175.0;
 const distanceToMinuteTick = 28.0;
 const distanceToSecondTick = 24.0;
 
-const minuteFocusWidth = 50.0;
+const minuteFocusWidth = 55.0;
 const minuteFocusHeight = 100.0;
-const minuteFocusBorderRadius = 25.0;
+const minuteFocusBorderRadius = 55.0;
 const minuteFocusOffset = secondFaceWidth - hourTickMarkLength - minuteFocusHeight / 2;
 
 const minuteTextOffset = minuteFaceWidth - hourTickMarkLength;
