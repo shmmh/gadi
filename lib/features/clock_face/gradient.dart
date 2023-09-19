@@ -23,17 +23,17 @@ class GradientOverlayPainter extends CustomPainter {
     final paint = Paint()
       ..shader = ui.Gradient.radial(
         Offset.zero,
-        200,
+        130,
         const [
           Color.fromARGB(0, 0, 0, 0),
-          Color.fromARGB(164, 0, 0, 0),
+          Color.fromARGB(171, 0, 0, 0),
         ],
         [0.0, 1],
         TileMode.clamp,
         Matrix4.translationValues(0.0, 0.0, 0.0).storage,
       );
 
-    canvas.drawCircle(Offset.zero, secondFaceWidth + 20, paint);
+    canvas.drawCircle(Offset.zero, secondFaceWidth + 40, paint);
   }
 
   @override
