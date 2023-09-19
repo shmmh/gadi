@@ -55,10 +55,10 @@ class _ClockFaceState extends State<ClockFace> {
         SecondCustomPaint(second: _dateTime.second),
         MinuteCustomPaint(minute: _dateTime.minute),
         HourCustomPaint(hour: _dateTime.hour),
+        const GradientCustomPaint(),
         FocusCustomPaint(
           dateTime: _dateTime,
         ),
-        const GradientCustomPaint(),
         GestureDetector(
           onVerticalDragUpdate: (details) => print(details),
           child: Container(

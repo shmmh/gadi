@@ -11,9 +11,8 @@ void drawTicks(Canvas canvas, Size size, double radius, Paint tickPainter, TextP
 
   TextStyle textStyle = minute ? minuteTextStyle : secondTextStyle;
   double distanceToTick = minute ? distanceToMinuteTick : distanceToSecondTick;
-  const focusDir = pi / 2;
   canvas.rotate(angleOffset);
-  // canvas.rotate(focusDir);
+  canvas.rotate(focusDir);
 
   for (var i = 0; i < 60; i++) {
     tickPainter.strokeWidth = i % 5 == 0 ? hourTickMarkWidth : minuteTickMarkWidth;
@@ -41,7 +40,7 @@ void drawText(Canvas canvas, double radius, double distanceToTick, TextPainter t
   );
 
   // rotate the text to make it horizontally aligned
-  canvas.rotate((angle * i) - angleOffset);
+  canvas.rotate((angle * i) - angleOffset - focusDir);
   textPainter.layout();
 
   textPainter.paint(canvas, Offset(-(textPainter.width / 2), -(textPainter.height / 2)));
