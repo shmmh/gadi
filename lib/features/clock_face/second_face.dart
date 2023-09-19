@@ -17,9 +17,8 @@ class SecondCustomPaint extends StatelessWidget {
 }
 
 class SecondFacePainter extends CustomPainter {
-  final int second;
+  late int second;
   SecondFacePainter({required this.second});
-
   @override
   void paint(Canvas canvas, Size size) {
     Offset center = Offset(size.width / 2, size.height / 2);

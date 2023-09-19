@@ -14,17 +14,28 @@ void drawTicks(Canvas canvas, Size size, double radius, Paint tickPainter, TextP
   canvas.rotate(angleOffset);
   canvas.rotate(focusDir);
 
-  for (var i = 0; i < 60; i++) {
+  for (var i = 0; i < min; i++) {
     tickPainter.strokeWidth = i % 5 == 0 ? hourTickMarkWidth : minuteTickMarkWidth;
     tickMarkLength = i % 5 == 0 ? hourTickMarkLength : minuteTickMarkLength;
 
     canvas.drawLine(Offset(0.0, -radius), Offset(0.0, -radius + tickMarkLength), tickPainter);
 
     if (i % 5 == 0) {
-      drawText(canvas, radius, distanceToTick, textPainter, i, textStyle, angle, angleOffset, focusDir, '${i == 0 ? 0 : i}'.padLeft(2, '0'));
+      drawText(
+        canvas,
+        radius,
+        distanceToTick,
+        textPainter,
+        i,
+        textStyle,
+        angle,
+        angleOffset,
+        focusDir,
+        formattTime(i == 0 ? 0 : i),
+      );
     }
 
-    canvas.rotate(-angle);
+    canvas.rotate(-rotDir * angle);
   }
   canvas.restore();
 }
@@ -40,7 +51,7 @@ void drawText(Canvas canvas, double radius, double distanceToTick, TextPainter t
   );
 
   // rotate the text to make it horizontally aligned
-  canvas.rotate((angle * i) - angleOffset - focusDir);
+  canvas.rotate((rotDir * angle * i) - angleOffset - focusDir);
   textPainter.layout();
 
   textPainter.paint(canvas, Offset(-(textPainter.width / 2), -(textPainter.height / 2)));
@@ -49,7 +60,7 @@ void drawText(Canvas canvas, double radius, double distanceToTick, TextPainter t
 }
 
 double rotationAngle(int time) {
-  return time * 2 * pi / 60.0;
+  return rotDir * time * 2 * pi / min;
 }
 
 String formattTime(int time) {
