@@ -17,7 +17,7 @@ class HourCustomPaint extends StatelessWidget {
 
 class HourFacePainter extends CustomPainter {
   final int hour;
-  HourFacePainter({required this.hour});
+  const HourFacePainter({required this.hour});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -40,6 +40,6 @@ class HourFacePainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return false;
+    return true;
   }
 }

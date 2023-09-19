@@ -54,7 +54,7 @@ class MinuteFocusPainter extends CustomPainter {
     // canvas.rotate((angle * dateTime.minute) - rotationAngle(dateTime.minute));
     drawText(canvas, minuteFaceWidth, distanceToMinuteTick + 5, minutePainter, dateTime.minute, minuteFocusTextStyle, angle,
         rotationAngle(dateTime.minute) + focusDir, 0, formattTime(dateTime.minute));
-    drawText(canvas, secondFaceWidth, distanceToSecondTick + 5, secondPainter, dateTime.second, secondFocusTextStyle, angle,
+    drawText(canvas, secondFaceWidth, distanceToSecondTick + 10, secondPainter, dateTime.second, secondFocusTextStyle, angle,
         rotationAngle(dateTime.second) + focusDir, 0, formattTime(dateTime.second));
     // canvas.rotate(-angle);
     canvas.restore();
