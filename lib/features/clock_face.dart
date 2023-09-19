@@ -3,6 +3,7 @@ import "dart:async";
 import 'package:flutter/material.dart';
 import "package:gadi/features/hour_face.dart";
 import "package:gadi/features/minute_focus.dart";
+import "package:gadi/utils/constants.dart";
 
 import "gradient.dart";
 import "minute_face.dart";
@@ -49,6 +50,7 @@ class _ClockFaceState extends State<ClockFace> {
 
     // Paint Second Face first followed by the minute face
     return Stack(
+      alignment: Alignment.center,
       children: [
         SecondCustomPaint(second: _dateTime.second),
         MinuteCustomPaint(minute: _dateTime.minute),
@@ -57,6 +59,27 @@ class _ClockFaceState extends State<ClockFace> {
           dateTime: _dateTime,
         ),
         const GradientCustomPaint(),
+        GestureDetector(
+          onVerticalDragUpdate: (details) => print(details),
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(300),
+              // color: Colors.white,
+            ),
+          ),
+        ),
+        GestureDetector(
+          onHorizontalDragUpdate: (details) => print("minute"),
+          child: Container(
+            width: minuteFaceWidth * 2,
+            height: minuteFaceWidth * 2,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(300),
+              // color: Colors.red,
+            ),
+          ),
+        ),
       ],
     );
   }

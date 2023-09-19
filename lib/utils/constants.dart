@@ -1,5 +1,8 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
+const angle = 2 * pi / 60;
 const hourTickMarkLength = 10.0;
 const minuteTickMarkLength = 5.0;
 const hourTickMarkWidth = 2.0;
