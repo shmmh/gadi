@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'dart:math';
-import 'features/clock_face.dart';
+import 'features/clock_face/clock_face.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 
-import '../utils/constants.dart';
+import '../../utils/constants.dart';
 
 class GradientCustomPaint extends StatelessWidget {
   const GradientCustomPaint({super.key});

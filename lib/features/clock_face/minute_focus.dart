@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:gadi/utils/draw_ticks.dart';
 
-import '../utils/constants.dart';
+import 'package:gadi/utils/constants.dart';
 
 class FocusCustomPaint extends StatelessWidget {
   final DateTime dateTime;
@@ -46,7 +46,7 @@ class MinuteFocusPainter extends CustomPainter {
     canvas.drawRRect(focusOutline, focusRect);
 
     canvas.restore();
-
+    canvas.save();
     canvas.rotate(focusDir);
     TextPainter secondPainter = TextPainter(textAlign: TextAlign.center, textDirection: TextDirection.ltr);
     TextPainter minutePainter = TextPainter(textAlign: TextAlign.center, textDirection: TextDirection.ltr);

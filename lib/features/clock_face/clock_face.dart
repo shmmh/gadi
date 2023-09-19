@@ -1,13 +1,13 @@
 import "dart:async";
 
 import 'package:flutter/material.dart';
-import "package:gadi/features/hour_face.dart";
-import "package:gadi/features/minute_focus.dart";
+import 'package:gadi/features/clock_face/hour_face.dart';
+import 'package:gadi/features/clock_face/minute_focus.dart';
 import "package:gadi/utils/constants.dart";
 
-import "gradient.dart";
-import "minute_face.dart";
-import "second_face.dart";
+import 'gradient.dart';
+import 'minute_face.dart';
+import 'second_face.dart';
 
 // import "package:quiver/async.dart";
 

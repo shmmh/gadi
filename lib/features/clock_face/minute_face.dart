@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gadi/utils/draw_ticks.dart';
-import '../utils/constants.dart';
+import '../../utils/constants.dart';
 
 class MinuteCustomPaint extends StatelessWidget {
   final int minute;
