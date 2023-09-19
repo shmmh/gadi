@@ -1,11 +1,24 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:gadi/config/draw_ticks.dart';
-import '../config/constants.dart';
+import 'package:gadi/utils/draw_ticks.dart';
+
+import '../utils/constants.dart';
+
+class FocusCustomPaint extends StatelessWidget {
+  final DateTime dateTime;
+  const FocusCustomPaint({super.key, required this.dateTime});
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomPaint(
+      painter: MinuteFocusPainter(dateTime: dateTime),
+      child: Container(),
+    );
+  }
+}
 
 class MinuteFocusPainter extends CustomPainter {
-  MinuteFocusPainter();
+  final DateTime dateTime;
+  MinuteFocusPainter({required this.dateTime});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -33,8 +46,8 @@ class MinuteFocusPainter extends CustomPainter {
 
     TextPainter secondPainter = TextPainter(textAlign: TextAlign.center, textDirection: TextDirection.ltr);
     TextPainter minutePainter = TextPainter(textAlign: TextAlign.center, textDirection: TextDirection.ltr);
-    secondPainter.text = const TextSpan(text: "01", style: secondTextStyle);
-    minutePainter.text = const TextSpan(text: "02", style: minuteTextStyle);
+    secondPainter.text = TextSpan(text: formattTime(dateTime.second), style: secondTextStyle);
+    minutePainter.text = TextSpan(text: formattTime(dateTime.minute), style: minuteTextStyle);
 
     minutePainter.layout();
     secondPainter.layout();

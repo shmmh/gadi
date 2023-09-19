@@ -1,7 +1,19 @@
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 
-import '../config/constants.dart';
+import '../utils/constants.dart';
+
+class GradientCustomPaint extends StatelessWidget {
+  const GradientCustomPaint({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomPaint(
+      painter: GradientOverlayPainter(),
+      child: Container(),
+    );
+  }
+}
 
 class GradientOverlayPainter extends CustomPainter {
   @override

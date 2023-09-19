@@ -43,3 +43,11 @@ void drawTicks(Canvas canvas, Size size, double radius, Paint tickPainter, TextP
   }
   canvas.restore();
 }
+
+double rotationAngle(int time) {
+  return -time * 2 * pi / 60.0;
+}
+
+String formattTime(int time) {
+  return time.toString().padLeft(2, "0");
+}
