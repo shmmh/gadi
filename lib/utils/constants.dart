@@ -21,7 +21,7 @@ const secondTextOffset = secondFaceWidth - hourTickMarkLength - 15;
 
 const minuteTextStyle = TextStyle(
   fontFamily: "Koulen",
-  fontSize: 32,
+  fontSize: 28,
   color: Colors.white,
 );
 const secondTextStyle = TextStyle(

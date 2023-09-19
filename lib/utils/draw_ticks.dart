@@ -31,7 +31,7 @@ void drawTicks(Canvas canvas, Size size, double radius, Paint tickPainter, TextP
       );
 
       // rotate the text to make it horizontally aligned
-      canvas.rotate((-angle * i) - angleOffset);
+      canvas.rotate((angle * i) - angleOffset);
       textPainter.layout();
 
       textPainter.paint(canvas, Offset(-(textPainter.width / 2), -(textPainter.height / 2)));
@@ -39,13 +39,13 @@ void drawTicks(Canvas canvas, Size size, double radius, Paint tickPainter, TextP
       canvas.restore();
     }
 
-    canvas.rotate(angle);
+    canvas.rotate(-angle);
   }
   canvas.restore();
 }
 
 double rotationAngle(int time) {
-  return -time * 2 * pi / 60.0;
+  return time * 2 * pi / 60.0;
 }
 
 String formattTime(int time) {
