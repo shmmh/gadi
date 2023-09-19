@@ -49,38 +49,14 @@ class _ClockFaceState extends State<ClockFace> {
     // countdownTimer.forEach((el) => print(el.remaining));
 
     // Paint Second Face first followed by the minute face
-    return Stack(
-      alignment: Alignment.center,
-      children: [
-        SecondCustomPaint(second: _dateTime.second),
-        MinuteCustomPaint(minute: _dateTime.minute),
-        HourCustomPaint(hour: _dateTime.hour),
-        const GradientCustomPaint(),
-        FocusCustomPaint(
-          dateTime: _dateTime,
-        ),
-        GestureDetector(
-          onVerticalDragUpdate: (details) => print(details),
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(300),
-              // color: Colors.white,
-            ),
-          ),
-        ),
-        GestureDetector(
-          onHorizontalDragUpdate: (details) => print("minute"),
-          child: Container(
-            width: minuteFaceWidth * 2,
-            height: minuteFaceWidth * 2,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(300),
-              // color: Colors.red,
-            ),
-          ),
-        ),
-      ],
-    );
+    return Stack(alignment: Alignment.center, children: [
+      SecondCustomPaint(second: _dateTime.second),
+      MinuteCustomPaint(minute: _dateTime.minute),
+      HourCustomPaint(hour: _dateTime.hour),
+      const GradientCustomPaint(),
+      FocusCustomPaint(
+        dateTime: _dateTime,
+      ),
+    ]);
   }
 }

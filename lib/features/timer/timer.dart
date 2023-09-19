@@ -1,10 +1,8 @@
 import "dart:async";
 
 import 'package:flutter/material.dart';
-import 'package:gadi/features/clock_face/hour_face.dart';
 import 'package:gadi/features/clock_face/minute_focus.dart';
 import "package:gadi/utils/constants.dart";
-import 'package:gadi/utils/draw_ticks.dart';
 
 import '../clock_face/gradient.dart';
 import '../clock_face/minute_face.dart';
@@ -42,7 +40,6 @@ class _ClockTimerState extends State<ClockTimer> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     _timer.cancel();
   }
@@ -53,44 +50,27 @@ class _ClockTimerState extends State<ClockTimer> {
     // countdownTimer.forEach((el) => print(el.remaining));
 
     // Paint Second Face first followed by the minute face
-    return Stack(
-      alignment: Alignment.center,
-      children: [
-        SecondCustomPaint(second: _dateTime.second),
-        MinuteCustomPaint(minute: _dateTime.minute),
-        // HourCustomPaint(hour: _dateTime.hour),
-        const Center(
-          child: Text(
-            "focus",
-            style: minuteFocusTextStyle,
-          ),
-        ),
-        const GradientCustomPaint(),
-        FocusCustomPaint(
-          dateTime: _dateTime,
-        ),
-        GestureDetector(
-          onVerticalDragUpdate: (details) => print(details),
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(300),
-              // color: Colors.white,
+    return Center(
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          GestureDetector(
+              onTap: () => print("second tap"), behavior: HitTestBehavior.translucent, child: SecondCustomPaint(second: _dateTime.second)),
+          MinuteCustomPaint(minute: _dateTime.minute),
+          // HourCustomPaint(hour: _dateTime.hour),
+          Container(
+            margin: const EdgeInsets.only(top: 50.0),
+            child: const Text(
+              "focus",
+              style: minuteTextStyle,
             ),
           ),
-        ),
-        GestureDetector(
-          onHorizontalDragUpdate: (details) => print("minute"),
-          child: Container(
-            width: minuteFaceWidth * 2,
-            height: minuteFaceWidth * 2,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(300),
-              // color: Colors.red,
-            ),
+          // const GradientCustomPaint(),
+          FocusCustomPaint(
+            dateTime: _dateTime,
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
